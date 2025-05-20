@@ -16,4 +16,6 @@ public interface JuegoRepository extends JpaRepository<Juego, Long> {
 
     @Query(value = "SELECT * FROM juego ORDER BY fecha_lanzamiento DESC LIMIT 1", nativeQuery = true)
     public Juego buscarJuegoMasReciente();
+
+    public List<Juego> findByFechaLanzamiento(Date fechaLanzamiento);
 }
