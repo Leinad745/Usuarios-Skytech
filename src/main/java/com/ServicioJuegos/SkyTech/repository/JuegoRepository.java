@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import java.util.Date;
 
 import com.ServicioJuegos.SkyTech.model.Juego;
@@ -18,4 +17,8 @@ public interface JuegoRepository extends JpaRepository<Juego, Long> {
     public Juego buscarJuegoMasReciente();
 
     public List<Juego> findByFechaLanzamiento(Date fechaLanzamiento);
+    public Juego findByTituloJuego(String tituloJuego);
+    List<Juego> findByDesarrollador(String desarrollador);
+    List<Juego> findByGenero(String genero);
+    List<Juego> findByClasificacionESRB(String clasificacionESRB);
 }

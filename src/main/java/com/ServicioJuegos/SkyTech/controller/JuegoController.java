@@ -18,7 +18,7 @@ public class JuegoController {
     private JuegoService juegoService;
 
     @GetMapping("/{tituloJuego}")
-    public List<Juego> findByTituloJuego(@PathVariable String tituloJuego) {
+    public Juego findByTituloJuego(@PathVariable String tituloJuego) {
         return juegoService.findByTituloJuego(tituloJuego);
     }
     

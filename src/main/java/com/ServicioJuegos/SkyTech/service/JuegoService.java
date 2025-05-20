@@ -40,7 +40,20 @@ public class JuegoService {
     }
 
     // El metodo findByTituloJuego busca juegos por su título sin embargo el JPA no reconoce la funcion
-    public List<Juego> findByTituloJuego(String tituloJuego) {
+    // Lo resolvi, no generan funciones lol
+    public Juego findByTituloJuego(String tituloJuego) {
         return juegoRepository.findByTituloJuego(tituloJuego);
+    }
+
+    public List<Juego> findByDesarrollador(String desarrollador) {
+        return juegoRepository.findByDesarrollador(desarrollador);
+    }
+
+    public List<Juego> findByGenero(String genero) {
+        return juegoRepository.findByGenero(genero);
+    }
+
+    public List<Juego> findByClasificacionESRB(String clasificacionESRB) {
+        return juegoRepository.findByClasificacionESRB(clasificacionESRB);
     }
 }
