@@ -6,6 +6,7 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.time.Year;
 import java.util.Date;
 
 @Service
@@ -27,8 +28,8 @@ public class JuegoService {
         return juegoRepository.save(juego);
     }
 
-    public List<Juego> findByFechaLanzamiento(Date fechaLanzamiento) {
-        return juegoRepository.findByFechaLanzamiento(fechaLanzamiento);
+    public List<Juego> findByYear(Year year) {
+        return juegoRepository.findByYear(year);
     }
 
     public Juego buscarJuegoMasReciente() {

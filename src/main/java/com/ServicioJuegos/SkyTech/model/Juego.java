@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import jakarta.persistence.*;
-import java.util.Date;
+import java.time.Year;
 
 @Entity
 @Table(name = "juego")
@@ -26,7 +26,7 @@ public class Juego {
     private String genero;
 
     @Column(nullable = false)
-    private Date fechaLanzamiento;
+    private Year anioLanzamiento;
 
     @Column(nullable = false)
     private String desarrollador;
@@ -38,5 +38,5 @@ public class Juego {
     private String clasificacionESRB;
 
     @Column(nullable = false)
-    private boolean disponibilidad;
+    private Boolean disponibilidad;
 }
