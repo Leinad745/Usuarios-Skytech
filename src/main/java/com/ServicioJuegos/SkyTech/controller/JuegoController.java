@@ -13,7 +13,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/api/juegos")
+@RequestMapping("/api/v1/juegos")
 public class JuegoController {
     @Autowired
     private JuegoService juegoService;
@@ -78,7 +78,7 @@ public class JuegoController {
         } return ResponseEntity.ok(juegoReciente);
     }
 
-    @GetMapping("/juego/{tituloJuego}")
+    @GetMapping("/titulo/{tituloJuego}")
     public Juego findByTituloJuego(@PathVariable String tituloJuego) {
         return juegoService.findByTituloJuego(tituloJuego);
     }
