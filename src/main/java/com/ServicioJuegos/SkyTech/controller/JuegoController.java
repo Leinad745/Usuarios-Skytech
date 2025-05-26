@@ -107,5 +107,13 @@ public class JuegoController {
         } return ResponseEntity.ok(juegos);
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> eliminarJuego(@PathVariable Long id) {
+        try {
+            juegoService.delete(id);
+            return ResponseEntity.noContent().build();
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
 }
     
