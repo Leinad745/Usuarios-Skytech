@@ -31,7 +31,7 @@ public class Usuario {
     private String primerNombre;
     @Column(nullable = false)
     private String apellidoPaterno;
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String segundoNombre;
     @Column(nullable = false)
     private String apellidoMaterno;
